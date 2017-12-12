@@ -68,6 +68,9 @@ function port_on_message(message) {
                    // TODO:
                 }
             );
+            // DISCORD
+            discord_ipc_update(_p.song);
+            
         }
 
         if (_p.is_playing) {
