@@ -37,15 +37,15 @@ function send_ipc_msg(client_id, activity) {
 
 function discord_ipc_update(song) {
 	send_ipc_msg("387837135568502785",{
-		state: song.artist + " - " + song.album,
-		details: song.title,
+		state: (song.artist || "Unknown Artist") + " - " + (song.album || "Unknown Album"),
+		details: (song.title || "Unknown Song"),
 		timestamps: {
 			start: parseInt(new Date().getTime() / 1000 - song.position),
 			end: parseInt(new Date().getTime() / 1000 + (song.time - song.position))
 		},
 		assets: {
 			large_image: "ayano-14",
-			large_text: song.album
+			large_text: song.album || "Unknown Album"
 		}
 	});
 }
