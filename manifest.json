@@ -1,5 +1,5 @@
 {
-   "name" : "Google Play Last.fm Scrobbler",
+   "name" : "Google Play Last.fm Scrobbler + Discord",
    "description" : "Scrobbles songs from Google Play to Last.fm",
    "version" : "1.7.0",
    "manifest_version": 2,
